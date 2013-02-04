@@ -40,7 +40,7 @@ echo "<b>Passive DNS</b><br><br>";
 echo "Please Enter Domain or IP to query passive DNS records: "; 
 echo '<form name search method="get">';
 echo 'Domain/IP: <input type="text" maxlength="100" name="query">';
-echo '<input type="submit" value="Track"></form>';
+echo '<input type="submit" value="Search"></form>';
 }
 
 
@@ -56,7 +56,7 @@ echo "<b>Zero Results in the local PDNS Database</b><br><br>";
 echo "Please Enter A New Domain or IP: ";
 echo '<form name search method="get">';
 echo 'Domain/IP: <input type="text" maxlength="100" name="query">';
-echo '<input type="submit" value="Track"></form>';
+echo '<input type="submit" value="Search"></form>';
 }
 else{
  echo "<table cellpadding='5'><tr><td>Domain</td><td>Type</td><td>Result</td><td>TTL</td><td>First Seen</td><td>Last Seen</td></tr>";
@@ -67,7 +67,7 @@ while($row = mysql_fetch_array($domains)){
 echo "</table>";
 echo '<form name search method="get">';
 echo '<br><b>New Domain/IP: <input type="text" maxlength="100" name="query">';
-echo '<input type="submit" value="Track"></form>';
+echo '<input type="submit" value="Search"></form>';
 
 }
 }
@@ -79,7 +79,7 @@ echo "<b>Zero Results in the local PDNS Database</b><br><br>";
 echo "Please Enter A New Domain or IP: ";
 echo '<form name search method="get">';
 echo 'New Domain/IP: <input type="text" maxlength="100" name="query">';
-echo '<input type="submit" value="Track"></form>';
+echo '<input type="submit" value="Search"></form>';
 }
 else{ 
 
@@ -92,7 +92,7 @@ while($row = mysql_fetch_array($ips)){
 echo "</table>";
 echo '<form name search method="get">';
 echo '<br><b>Domain/IP: <input type="text" maxlength="100" name="query">';
-echo '<input type="submit" value="Track"></form>';
+echo '<input type="submit" value="Search"></form>';
 
 }
 }
@@ -101,7 +101,7 @@ echo "<b>You failed to enter a valid IP or Domain!</b><br><br>";
 echo "Please Enter Domain or IP to query passive DNS records: ";
 echo '<form name search method="get">';
 echo 'Domain/IP: <input type="text" maxlength="100" name="query">';
-echo '<input type="submit" value="Track"></form>';
+echo '<input type="submit" value="Search"></form>';
 }
 
 }
