@@ -15,7 +15,8 @@ A:hover {text-decoration: underline}
 
 // Passive DNS Php Frontend ..quick and dirty..maade for Dtrackr.com by Chris Clark
 // chris@xenosec.org / #xenosec / xen0ph0n @ github.com
-// Copyright and Licenced GPL v3
+// Replace the variables in the top lines under dbconnection and you'll be golden.
+// Searches for domain + any subs. You can search for TLDs and recieve all as well. 
 
 // dbconnection
 mysql_connect("MYSQLHOST", "MYSQLUSER", "MYSQLPASS") or die(mysql_error());
@@ -73,7 +74,7 @@ echo '<input type="submit" value="Search"></form>';
 }
 elseif(is_valid_domain_name($query)){
 echo "<b>Passive DNS Records for Domain: ". $query ." below:</b> <br><br>";
-$ips = mysql_query("SELECT * FROM pdns WHERE query='$query'");
+$ips = mysql_query("SELECT * FROM pdns WHERE query='$query' OR query LIKE '%.$query'");
 if(mysql_num_rows($ips)==0){
 echo "<b>Zero Results in the local PDNS Database</b><br><br>";
 echo "Please Enter A New Domain or IP: ";
